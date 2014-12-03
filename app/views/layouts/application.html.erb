@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Liulishuo</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <div class="pull-right">
+    <%= link_to_if signed_in? ,  'history' ,root_path%>&nbsp;
+    <%= link_to_if signed_in? ,  'edit desc',edit_user_path %>
+    <%= link_to_if signed_in? ,  'user list',edit_user_path %>
+    <%= link_to 'login', login_path unless signed_in? %>
+    <%= link_to 'register', register_path unless signed_in? %>
+
+    <%= link_to 'logout', logout_path, method: :delete if signed_in? %>
+  </div>
+  <%= yield %>
+</div>
+</body>
+</html>

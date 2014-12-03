@@ -1,0 +1,14 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+---
+zh_CN:
+  activerecord:
+    models:
+      user: 用户
+
+    attributes:
+      user: 
+        name: 个人姓名
+        password: 密码           
+        password_confirmation: 确认密码
+        desc: 描述

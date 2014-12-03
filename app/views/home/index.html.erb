@@ -1,0 +1,19 @@
+<h1>Home#index</h1>
+<%= show_flash_msg %>
+<table>
+  <tr>
+    <th class="col-md-8">内容</th>
+    <th class="col-md-2">日期</th>
+    <th>用户</th>
+
+  </tr>
+  <% @histories.each do |item| %>
+      <tr>
+        <td><%= item.desc %></td>
+        <td><%= l item.created_at %></td>
+        <td><%= item.user.name %></td>
+
+      </tr>
+  <% end %>
+</table>
+<%= paginate @histories %>

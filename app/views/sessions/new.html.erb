@@ -1,0 +1,21 @@
+<h1>Sessions#new</h1>
+
+
+
+<%= form_for :user, url: login_path do |f| %>
+    <%= f.error_field %>
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+
+    </div>
+
+
+    <%= f.submit %>
+<% end %>

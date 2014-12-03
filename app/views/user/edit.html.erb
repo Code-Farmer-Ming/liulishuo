@@ -1,0 +1,13 @@
+<h1>Users#update</h1>
+
+<%= form_for current_user do |f| %>
+    <%= f.error_field %>
+    <div class="field">
+      <%= f.label :desc %>
+      <%= f.text_area :desc %>
+
+    </div>
+
+
+    <%= f.submit %>
+<% end %>
